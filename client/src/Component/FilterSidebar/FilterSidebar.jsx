@@ -32,9 +32,9 @@ const FilterSidebar = ({ products, setFilteredProducts }) => {
   return (
     
     <div className="h-fit max-h-[250px] overflow-y-auto p-2 ml-4 rounded-lg flex flex-col justify-start pt-1">
-      <h2 className="text-lg font-semibold mt-0 leading-tight pb-1">Filters</h2>
+      <h2 className="text-lg font-semibold mt-0 leading-tight pb-1 pl-6">Filters</h2>
 
-      <div className="space-y-1 mt-1">
+      <div className="space-y-1 mt-2 pl-4">
         {categories.map((category) => (
           <label key={category} className="flex items-center space-x-2 cursor-pointer">
             <input

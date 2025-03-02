@@ -27,8 +27,8 @@ const AllProduct = () => {
 
       {/* Sidebar - Filter Drawer */}
       <div
-        className={`fixed top-70 left-0 h-min w-40 bg-white shadow-lg p-4 z-40 transform transition-transform duration-1500 ease-in-out overflow-y-auto ${
-          isFilterOpen ? "translate-x-0" : "-translate-x-full"
+        className={`fixed top-70 left-0 h-min w-40 bg-whitep-4 z-40 transform transition-transform duration-1500 ease-in-out overflow-y-auto ${
+          isFilterOpen ? "translate-x-" : "-translate-x-full"
         }`}
         onMouseEnter={() => setIsFilterOpen(true)}
         onMouseLeave={() => setIsFilterOpen(false)}
@@ -41,23 +41,27 @@ const AllProduct = () => {
 
       {/* Product Grid */}
       <div className="w-full p-5">
-        <h1 className="text-center text-5xl mt-8">All Categories</h1>
-        <div className="flex justify-end mt-4 mb-6">
-          <SortDropdown />
-        </div>
+  <h1 className="text-center text-5xl mt-12">All Categories</h1> {/* Increased mt */}
+  
+  <div className="flex justify-end mt-4 mb-6"> {/* Added mb-6 for extra spacing */}
+    <SortDropdown />
+  </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {filteredProducts.length > 0 ? (
-            filteredProducts.map((product) => (
-              <ProductCard key={product.id} product={product} />
-            ))
-          ) : (
-            <p className="text-center col-span-4 text-gray-500">
-              No products found.
-            </p>
-          )}
-        </div>
-      </div>
+  {/* Centered Grid with Increased Vertical Gap */}
+  <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-12 px-8">
+
+    {filteredProducts.length > 0 ? (
+      filteredProducts.map((product) => (
+        <ProductCard key={product.id} product={product} />
+      ))
+    ) : (
+      <p className="text-center col-span-4 text-gray-500">
+        No products found.
+      </p>
+    )}
+  </div>
+</div>
+
     </div>
   );
 };
