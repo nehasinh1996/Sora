@@ -82,7 +82,9 @@ const SkinCare = () => {
         >
           <FaBars className="text-xl" />
         </button>
+        <div className="relative z-10 w-auto">
         <SortDropdown handleSort={handleSort} />
+        </div>
       </div>
 
       <div

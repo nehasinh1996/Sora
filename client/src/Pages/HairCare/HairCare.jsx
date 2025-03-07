@@ -89,7 +89,9 @@ const HairCare = () => {
         </button>
 
         {/* Sort Dropdown */}
+        <div className="relative z-10 w-auto">
         <SortDropdown handleSort={handleSort} />
+        </div>
       </div>
 
       {/* Sidebar for Filters with Transition */}

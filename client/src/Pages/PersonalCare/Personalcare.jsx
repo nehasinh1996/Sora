@@ -76,7 +76,7 @@ const PersonalCare = () => {
         />
       </div>
 
-      <div className="flex justify-between items-center px-5 mt-4">
+      <div className="flex justify-between items-center px-5 mt-4 mb-6">
         <button 
           className="bg-gray-800 text-white p-2 rounded-lg shadow-lg flex items-center -ml-6"
           onMouseEnter={() => setIsHoveringHamburger(true)}
@@ -84,7 +84,9 @@ const PersonalCare = () => {
         >
           <FaBars className="text-xl" />
         </button>
+        <div className="relative z-10 w-auto">
         <SortDropdown handleSort={handleSort} />
+        </div>
       </div>
 
       <div

@@ -91,7 +91,7 @@ const LipCare = () => {
         </button>
 
         {/* Sort Dropdown */}
-        <div className="relative z-10">
+        <div className="relative z-10 w-auto">
         <SortDropdown handleSort={handleSort} />
         </div>
       </div>
